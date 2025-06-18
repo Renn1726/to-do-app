@@ -10,7 +10,6 @@ const quotes = [
   `"A maneira de começar é parar de falar e começar a fazer." – Walt Disney`,
 ];
 
-// Seleciona o elemento da quote
 const quoteElement = document.querySelector(".quote");
 
 if (quoteElement) {
