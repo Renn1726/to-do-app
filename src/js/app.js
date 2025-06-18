@@ -3,7 +3,6 @@ const taskList = document.getElementById("task-list");
 const remainingCount = document.getElementById("remaining");
 const toggleBtn = document.getElementById("theme-toggle");
 
-// Carrega tarefas do localStorage
 const savedTasks = localStorage.getItem("tasks");
 let tasks = savedTasks ? JSON.parse(savedTasks) : [];
 
@@ -30,7 +29,7 @@ function updateList() {
     delBtn.textContent = "×";
     delBtn.onclick = () => deleteTask(index);
 
-    // Drag and drop events
+
     li.setAttribute("draggable", "true");
     li.addEventListener("dragstart", (e) => {
       e.dataTransfer.setData("text/plain", index);
@@ -67,7 +66,6 @@ function updateList() {
   const remaining = tasks.filter((task) => !task.completed).length;
   remainingCount.textContent = remaining;
 
-  // Salva no localStorage
   localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
@@ -96,14 +94,12 @@ function deleteTask(index) {
   }, 200);
 }
 
-// Adiciona tarefa com Enter
 taskInput.addEventListener("keydown", function (e) {
   if (e.key === "Enter") {
     addTask();
   }
 });
 
-// Tema escuro/claro com ícone ☀️/🌙
 toggleBtn.addEventListener("click", () => {
   const isDark = document.body.classList.toggle("dark-mode");
   localStorage.setItem("theme", isDark ? "dark" : "light");
@@ -118,5 +114,4 @@ if (savedTheme === "dark") {
   toggleBtn.textContent = "🌙";
 }
 
-// Inicializa a lista
 updateList();
