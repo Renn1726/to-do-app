@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your To Do</title>
+    <link rel="stylesheet" href="src/css/styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Your To Do</h1>
+
+      <div class="add-task">
+        <input type="text" id="task-input" placeholder="Add new task" />
+        <button onclick="addTask()">+</button>
+      </div>
+      <ul id="task-list"></ul>
+      <p class="counter">Your remaining todos: <span id="remaining">0</span></p>
+      <p class="quote">
+        "Fazer o que você ama é a base para ter abundância em sua vida." - Wayne
+        Dyer
+      </p>
+      <button id="theme-toggle" class="theme-toggle">🌙</button>
+    </div>
+
+    <script src="src/js/app.js"></script>
+    <script src="src/js/quotes.js"></script>
+  </body>
+</html>
