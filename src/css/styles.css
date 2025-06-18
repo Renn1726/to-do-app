@@ -208,8 +208,7 @@ li.dragging {
   }
 
   li {
-    flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   li button {
