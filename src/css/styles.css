@@ -207,6 +207,11 @@ li.dragging {
     font-size: 12px;
   }
 
+  li {
+   flex-direction: row;
+    align-items: center;
+}
+
   li button {
     align-self: flex-end;
   }
